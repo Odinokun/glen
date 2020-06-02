@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16px;
+  line-height: 1.38;
+  color: $text;
+  font-weight: 300;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+p {
+  margin: 0 0 10px 0;
+  strong {
+    font-weight: 500;
+  }
+}
+
+a {
+  transition: color .5s;
+  color: $link;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ol,
+ul {
+  li {
+    padding: 0;
+  }
+}
+
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+
+input {
+  padding: 3px 10px 5px 10px;
+  color: $text;
+  border: 1px solid $text;
+  &::placeholder {
+    @include placeholder-color($text);
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+svg {
+  display: block;
+  overflow: visible;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1124px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.btn {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 5px 24px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  background-color: $highlight;
+  box-shadow: none;
+}

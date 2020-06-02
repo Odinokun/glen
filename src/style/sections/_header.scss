@@ -1,0 +1,117 @@
+.header {
+  background-color: #fff;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 34px;
+    padding-bottom: 39px;
+  }
+}
+
+//begin #LOGO
+
+.header__logo {
+  display: block;
+  flex: none;
+  width: 320px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+//end #LOGO
+
+.header__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+
+//begin #SOCIAL
+.header-social {
+  display: flex;
+  padding-top: 5px;
+}
+
+.header-social__link {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+  &:hover {
+    svg {
+      fill: $link;
+    }
+  }
+  svg {
+    fill: $text;
+    width: 16px;
+    height: 16px;
+    transition: .5s;
+  }
+}
+
+//end #SOCIAL
+
+//begin #PHONE
+.header-phone {
+  display: flex;
+  align-items: baseline;
+  margin-left: 35px;
+}
+
+.header-phone__text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  color: $text;
+}
+
+.header-phone__link {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  margin-left: 6px;
+  text-decoration: none;
+  color: $link;
+}
+
+//end #PHONE
+//begin #APPOINTMENT
+.header__appointment {
+  margin-left: 47px;
+}
+
+//end #APPOINTMENT
+
+.header-menu {
+  padding-top: 34px;
+  //width: 100%;
+}
+
+.header-menu__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu__item {
+  padding: 0 24px;
+  list-style: none;
+}
+
+.header-menu__link {
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #363b41;
+}
+
+.header__burger {
+  display: none;
+}

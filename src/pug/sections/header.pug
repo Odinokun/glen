@@ -1,0 +1,46 @@
+// begin header
+header.header
+  .container
+    a(href="#").header__logo
+      img(src="assets/img/logo.svg" alt="picture")
+
+    //begin header__right
+    .header__right
+      //begin header__social
+      .header__social.header-social
+        a(href="#").header-social__link
+          +svg('inst')
+        a(href="#").header-social__link
+          +svg('fb')
+      //end header__social
+
+      //begin header__phone
+      .header__phone.header-phone
+        span.header-phone__text Phone:
+        a(href="tel:4109699300").header-phone__link 410 969 9300
+      //end header__phone
+
+      //begin header__appointment
+      .header__appointment
+        button.btn Appointment
+      //end header__appointment
+
+      //begin header__menu
+      .header__menu.header-menu#header-menu
+        ul.header-menu__list
+          li.header-menu__item
+            a(href="#").header-menu__link About Us
+          li.header-menu__item
+            a(href="#").header-menu__link Our Team
+          li.header-menu__item
+            a(href="#").header-menu__link Services
+          li.header-menu__item
+            a(href="#").header-menu__link Contacts
+      //end header__menu
+
+      //begin header__burger
+      .header__burger
+        include ../elements/burger
+      //end header__burger
+    //end header__right
+// end header
