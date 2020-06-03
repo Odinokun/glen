@@ -1,0 +1,112 @@
+extends ../_template
+
+mixin index-services__item(pic, text)
+  a(href="service.html" class='index-services__item' style='background-image: url(\'assets/img/index-services-' + pic + '.jpg\');')
+    span.index-services__text #{text}
+
+block variables
+  - var title           = 'Our Team | Glen Burnie Dental Group'
+  - var description     = 'Our Team | Glen Burnie Dental Group'
+  - var ogtitle         = 'Our Team | Glen Burnie Dental Group'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeader      = 'Our Team'
+
+block content
+  .main-wrap
+    include ../sections/header
+    //begin page-header
+    .page-header
+      .page-header__img(style="background-image: url('assets/img/page-header-team.jpg');")
+      .container
+        h2.title.page-header__title #{pageHeader}
+    //end page-header
+
+    //begin content
+    main.main.team
+      //begin team__group
+      .team__group.team-group
+        .container
+          h3.subtitle.team-group__title Dentists
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-01.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Dr. Nader Afgan
+              span.team-group__position General Dentist
+              p Regular hygiene sessions are a must for good oral health. To keep your gums in optimum condition, it is advised to have a quick Scale and Polish every 6 months at least. We believe the best way to achieve a happy, healthy smile is by regular dental appointments and regular oral hygiene appointments with a Scale and Polish cleaning session.
+              p.hidden-less-767 At Glen Burnie Dental Group, you are in capable hands of our experienced dentists and dental hygienists, who conduct a thorough cleaning for you and now there are many different options to chose between!
+          //end team-group__item
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-02.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Dr. Karthik Cherukuri
+              span.team-group__position General Dentist
+              p Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut imperdiet et leo in vulputate. Sed eleifend lacus eu sapien sagittis imperdiet. Etiam tempor mollis augue, ut tincidunt ex interdum eu.
+              p.hidden-less-767 Pellentesque rhoncus lectus sed posuere viverra. Vestibulum id turpis lectus. Donec rhoncus quis elit sed fermentum. Nullam sit amet ex enim. Fusce nec suscipit nulla. Maecenas porta mi vestibulum, lobortis est ac, hendrerit dui.
+              p.hidden-less-767 Pellentesque auctor id enim sit amet molestie.
+          //end team-group__item
+
+          h3.subtitle.team-group__title Management
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-03.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Vladimir Semerey
+              span.team-group__position Office Manager
+              p Duis pretium gravida enim, vel maximus ligula fermentum a. Sed rhoncus eget ex id egestas. Nam nec nisl placerat, tempus erat a, condimentum metus. Curabitur nulla nisi, lacinia at lobortis at, suscipit at nibh. Proin quis lectus finibus, mollis purus vitae, rutrum neque.
+              p.hidden-less-767 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam sed cursus metus, vel viverra mi.
+              p.hidden-less-767 Mauris aliquet egestas eros ac placerat. Proin condimentum ligula at diam euismod fringilla et quis lacus.
+          //end team-group__item
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-04.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Christin
+              span.team-group__position Patient coordinator
+              p Aenean sed nibh a magna posuere tempor. Nunc faucibus pellentesque nunc in aliquet. Donec congue, nunc vel tempor congue, enim sapien lobortis ipsum, in volutpat sem ex in ligula. Nunc purus est, consequat condimentum faucibus sed, iaculis sit amet massa. Fusce ac condimentum turpis. Ut consequat lacinia augue, vitae aliquam sapien ullamcorper at.
+              p.hidden-less-767 Donec efficitur, ligula ut lacinia viverra, lorem lacus condimentum leo, eu luctus dolor ex at quam. Fusce a nisi at erat dapibus posuere eget sed nulla. Nam sem odio, hendrerit vel mi ut, pharetra viverra massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          //end team-group__item
+
+          h3.subtitle.team-group__title Dental Hygienist
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-05.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Lauren
+              span.team-group__position Dental Hygienist
+              p Vestibulum blandit viverra convallis. Pellentesque ligula urna, fermentum ut semper in, tincidunt nec dui. Morbi mauris lacus, consequat eget justo in, semper gravida enim. Donec ultrices varius ligula. Ut non pretium augue.
+              p.hidden-less-767 Etiam non rutrum metus. In varius sit amet lorem tempus sagittis. Cras sed maximus enim, vel ultricies tortor. Pellentesque consectetur tellus ornare felis porta dapibus. Etiam eget viverra ipsum, ac posuere massa. Nam vitae tempor metus. Donec rhoncus, metus ac convallis ultricies, turpis augue vestibulum elit, ut pharetra orci urna quis lectus.
+          //end team-group__item
+
+          h3.subtitle.team-group__title Assistants
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-06.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Randy Lawson
+              span.team-group__position Assistant
+              p Proin ex ipsum, facilisis id tincidunt sed, vulputate in lacus. Donec pharetra faucibus leo, vitae vestibulum leo scelerisque eu. Nam enim dolor, porta at ex ut, eleifend tristique metus. Integer sit amet auctor ligula, vel dictum orci. Nam feugiat interdum nisl.
+              p.hidden-less-767 Ut id velit ac ante maximus gravida. Vivamus lobortis vestibulum mauris a mollis. Nunc mollis tempus lorem eu pulvinar. Quisque mollis blandit aliquam. Nulla finibus gravida dignissim. Sed viverra mattis dictum. In ultricies tellus in auctor semper. Sed blandit arcu sem, vitae eleifend dui iaculis non.
+          //end team-group__item
+          //begin team-group__item
+          .team-group__item
+            .team-group__img
+              img(src="assets/img/doctor-07.jpg" alt="doctor")
+            .team-group__info
+              h4.team-group__name Ronnie Powell
+              span.team-group__position Assistant
+              p Phasellus finibus enim nulla, quis ornare odio facilisis eu. Suspendisse ornare ante sit amet arcu semper, vel eleifend tortor egestas. Aenean luctus, lorem in hendrerit interdum, leo orci egestas diam, ac euismod massa est et turpis. Etiam auctor lectus vel neque convallis pharetra. Ut turpis eros, aliquet non ante id, interdum placerat erat. Curabitur sit amet eros vel orci venenatis hendrerit.
+              p.hidden-less-767 Cras sagittis sagittis sagittis. In hac habitasse platea dictumst. Phasellus diam erat, porttitor sed ligula at, ultricies auctor tellus. Donec ut sem in turpis ultrices suscipit ut auctor tellus. Quisque a tincidunt ipsum.
+          //end team-group__item
+      //end team__group
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
