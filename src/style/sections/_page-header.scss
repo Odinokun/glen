@@ -1,0 +1,29 @@
+.page-header {
+  background-color: rgba(236, 236, 236, .5);
+  .container {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    @include max(480) {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-header__img {
+  height: 320px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(1023) {
+    height: 250px;
+  }
+  @include max(767) {
+    height: 200px;
+  }
+  @include max(480) {
+    height: 90px;
+  }
+}

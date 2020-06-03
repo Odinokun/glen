@@ -7,11 +7,47 @@ block variables
   - var ogimage     = 'assets/img/social.jpg'
 
 block content
-
-  //begin content
-  main.main
+  .main-wrap
     include ../sections/header
+
+    //begin content
+    main.main
+      include ../sections/index-video
+      include ../sections/index-text-01
+      include ../sections/index-services
+      include ../sections/index-text-02
+      include ../sections/index-banner
+      include ../sections/index-review
+      include ../sections/index-all-team
+      include ../sections/index-write-us
+      include ../sections/index-map
+    //end content
+
     include ../sections/footer
     include ../sections/scripts
-  //end content
+
+    script.
+      function initMap() {
+        var myLatLng = {lat: 39.164232, lng: -76.625081};
+        var windowWidth = document.documentElement.clientWidth;
+        console.log(windowWidth);
+        var mapCenter;
+
+        if (windowWidth > 767) {
+          mapCenter = {lat: 39.165, lng: -76.67};
+        } else {
+          mapCenter = {lat: 39.18, lng: -76.625};
+        }
+        
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: mapCenter
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Kerner'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")
 

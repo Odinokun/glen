@@ -1,16 +1,16 @@
 // begin header
 header.header
   .container
-    a(href="#").header__logo
-      img(src="assets/img/logo.svg" alt="picture")
+    a(href="/").header__logo
+      img(src="assets/img/logo.svg" alt="Glen Burnie Dental Group")
 
     //begin header__right
     .header__right
       //begin header__social
       .header__social.header-social
-        a(href="#").header-social__link
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-social__link
           +svg('inst')
-        a(href="#").header-social__link
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-social__link
           +svg('fb')
       //end header__social
 
@@ -28,18 +28,18 @@ header.header
       //begin header__menu
       .header__menu.header-menu#header-menu
         ul.header-menu__list
+          li.header-menu__item.active
+            a(href="about.html").header-menu__link About Us
           li.header-menu__item
-            a(href="#").header-menu__link About Us
+            a(href="team.html").header-menu__link Our Team
           li.header-menu__item
-            a(href="#").header-menu__link Our Team
+            a(href="services.html").header-menu__link Services
           li.header-menu__item
-            a(href="#").header-menu__link Services
-          li.header-menu__item
-            a(href="#").header-menu__link Contacts
+            a(href="contacts.html").header-menu__link Contacts
       //end header__menu
 
       //begin header__burger
-      .header__burger
+      .header__burger#header__burger
         include ../elements/burger
       //end header__burger
     //end header__right

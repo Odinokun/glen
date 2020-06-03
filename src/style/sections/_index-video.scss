@@ -1,0 +1,36 @@
+.index-video {
+  position: relative;
+  height: 720px;
+  background-image: url('../img/bg-index-video.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(1023) {
+    height: 450px;
+  }
+  @include max(767) {
+    height: 350px;
+  }
+  @include max(480) {
+    height: 202px;
+  }
+}
+
+.index-video-btn {
+  width: 231px;
+  height: 231px;
+
+  @include max(1023) {
+    width: 150px;
+    height: 150px;
+  }
+  @include max(767) {
+    width: 100px;
+    height: 100px;
+  }
+  @include max(480) {
+    width: 66px;
+    height: 66px;
+  }
+}

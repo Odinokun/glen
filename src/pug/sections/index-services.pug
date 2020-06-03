@@ -1,0 +1,15 @@
+mixin index-services__item(pic, text)
+  a(href="service.html" class='index-services__item' style='background-image: url(\'assets/img/index-services-' + pic + '.jpg\');')
+    span.index-services__text #{text}
+
+//begin index-services
+.index-services
+  +index-services__item('01', 'Dental Crown')
+  +index-services__item('02', 'Teeth Cleaning')
+  +index-services__item('03', 'Snap-On Dentures')
+  +index-services__item('04', 'Periodontics')
+  +index-services__item('05', 'Whitening')
+  a(href="#").index-services__item
+    span.index-services__text All Services
+    +svg('arr-right')
+//end index-services

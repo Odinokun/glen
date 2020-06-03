@@ -1,0 +1,102 @@
+.index-review {
+  .container {
+    padding-top: 58px;
+    padding-bottom: 77px;
+
+    @include max(767) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    @include max(480) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.index-review__header {
+  margin-bottom: 40px;
+
+  @include max(767) {
+    margin-bottom: 16px;
+  }
+}
+
+.index-review__body {
+  display: flex;
+
+  @include max(767) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.index-review__video {
+  position: relative;
+  flex: none;
+
+  @include max(1023) {
+    max-width: 50%;
+  }
+  @include max(767) {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  @include max(640) {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.index-review__video-btn {
+  width: 95px;
+  height: 95px;
+
+  @include max(480) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.index-review__description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 106px;
+
+  @include max(1023) {
+    padding-left: 40px;
+  }
+  @include max(767) {
+    padding-left: 0;
+  }
+}
+
+.index-review__name {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  @include max(767) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.index-review__stars {
+  display: flex;
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 17px;
+    height: 16px;
+    margin-right: 4px;
+  }
+}

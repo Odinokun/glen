@@ -1,0 +1,15 @@
+.index-text {
+  .container {
+    padding-top: 59px;
+    padding-bottom: 51px;
+
+    @include max(767) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    @include max(480) {
+      padding-top: 16px;
+      padding-bottom: 0;
+    }
+  }
+}

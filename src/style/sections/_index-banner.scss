@@ -1,0 +1,91 @@
+.index-banner {
+  background-image: url('../img/bg-index-banner.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  .container {
+    padding-top: 83px;
+    padding-bottom: 99px;
+
+    @include max(767) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @include max(480) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.index-banner__title {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+  max-width: 566px;
+  margin-bottom: 61px;
+  color: #fff;
+
+  @include max(1023) {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  @include max(767) {
+    margin-bottom: 28px;
+  }
+  @include max(359) {
+    font-size: 44px;
+  }
+}
+
+.index-banner__phone {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+
+  @include max(1023) {
+    margin-bottom: 45px;
+  }
+  @include max(767) {
+    margin-bottom: 35px;
+  }
+}
+
+.index-banner__phone-text {
+  font-size: 32px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: -3px;
+  color: #fff;
+
+  @include max(1023) {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.index-banner__phone-link {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+
+  @include max(1023) {
+    font-size: 48px;
+  }
+  @include max(359) {
+    font-size: 40px;
+  }
+}
+
+.index-banner__btn {
+  min-height: 64px;
+  padding: 5px 42px;
+
+  @include max(767) {
+    min-height: 48px;
+  }
+}

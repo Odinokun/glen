@@ -3,8 +3,8 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin no-JS
-  require('./modules/noJs')();
+  // begin open/close menu
+  require('./modules/menu')();
 
   // begin phone mask
   // require('./modules/maskedinput')();
