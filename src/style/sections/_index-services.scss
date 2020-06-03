@@ -31,19 +31,20 @@
     height: 22px;
     margin-left: 20px;
   }
-  &:last-child {
-    @include max(480) {
-      min-height: 96px;
-      border-bottom: 1px solid rgba(54, 59, 65, .1);
-    }
-    .index-services__text {
-      font-size: 32px;
-      font-weight: 500;
-      color: $text;
+}
 
-      @include max(480) {
-        font-size: 24px;
-      }
+.index-services__item--link {
+  @include max(480) {
+    min-height: 96px;
+    border-bottom: 1px solid rgba(54, 59, 65, .1);
+  }
+  .index-services__text {
+    font-size: 32px;
+    font-weight: 500;
+    color: $text;
+
+    @include max(480) {
+      font-size: 24px;
     }
   }
 }
