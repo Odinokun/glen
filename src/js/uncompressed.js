@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'about',
     'services',
-    'team'
+    'team',
+    'contacts'
     ]);
 });
 

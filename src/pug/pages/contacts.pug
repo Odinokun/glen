@@ -1,0 +1,130 @@
+extends ../_template
+
+mixin index-services__item(pic, text)
+  a(href="service.html" class='index-services__item' style='background-image: url(\'assets/img/index-services-' + pic + '.jpg\');')
+    span.index-services__text #{text}
+
+block variables
+  - var title           = 'Contacts | Glen Burnie Dental Group'
+  - var description     = 'Contacts | Glen Burnie Dental Group'
+  - var ogtitle         = 'Contacts | Glen Burnie Dental Group'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeader      = 'Contacts'
+
+block content
+  .main-wrap
+    include ../sections/header
+    //begin page-header
+    .page-header
+      .page-header__img(style="background-image: url('assets/img/page-header-contacts.jpg');")
+      .container
+        h2.title.page-header__title #{pageHeader}
+    //end page-header
+
+    //begin content
+    main.main.contacts
+      .container
+        //begin contacts__left
+        .contacts__left.contacts-left
+          //begin contacts-left__row--social
+          .contacts-left__row.contacts-left__row--social
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-left__link
+              +svg('inst')
+              span Instagram
+            a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-left__link
+              +svg('fb')
+              span Facebook
+          //end contacts-left__row--social
+
+          //begin contacts-left__row--adress
+          .contacts-left__row.contacts-left__row--adress
+            .contacts-left__icon
+              +svg('marker')
+            a(href="https://goo.gl/maps/5ubs5g1duLPKhTMe8" target="_blank" rel="nofollow noopener noreferrer").contacts-left__link
+              span 5 Crain Hwy. North 21061 Glen Burnie, MD
+          //end contacts-left__row--adress
+
+          //begin contacts-left__row--phone
+          .contacts-left__row.contacts-left__row--phone
+            .contacts-left__icon
+              +svg('phone')
+            a(href="tel:410 969 9300").contacts-left__link
+              span 410 969 9300
+            a(href="tel:410 969 9311").contacts-left__link
+              span 410 969 9311
+          //end contacts-left__row--phone
+
+          //begin contacts-left__row--email
+          .contacts-left__row.contacts-left__row--email
+            .contacts-left__icon
+              +svg('email')
+            a(href="mailto:info@glenburniedentalgroup.com").contacts-left__link
+              span info@glenburniedentalgroup.com
+          //end contacts-left__row--email
+
+          //begin contacts-left__row--schedule
+          .contacts-left__row.contacts-left__row--schedule
+            .contacts-left__icon
+              +svg('clock')
+            .contacts-left__schedule
+              .contacts-left__schedule-row
+                span Monday
+                span 09:00 - 18:00
+              .contacts-left__schedule-row
+                span Tuesday
+                span 09:00 - 19:00
+              .contacts-left__schedule-row
+                span Wednesday
+                span 09:00 - 19:00
+              .contacts-left__schedule-row
+                span Thursday
+                span 09:00 - 18:00
+              .contacts-left__schedule-row
+                span Friday
+                span 09:00 - 17:00
+          //end contacts-left__row--schedule
+        //end contacts__left
+
+        //begin contacts__right
+        .contacts__right
+          form.contacts__form
+            input(type='text' placeholder='Name').contacts__input
+            input(type='email' placeholder='Email').contacts__input
+            textarea(placeholder='Message').contacts__textarea
+            input(type='submit' value='Send Message').btn.contacts__btn
+        //end contacts__right
+
+      //begin contacts__map
+      .contacts__map
+        #map
+      //end contacts__map
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
+
+    script.
+      function initMap() {
+        var myLatLng = {lat: 39.164232, lng: -76.625081};
+        var windowWidth = document.documentElement.clientWidth;
+        console.log(windowWidth);
+        var mapCenter;
+
+        if (windowWidth > 767) {
+          mapCenter = {lat: 39.165, lng: -76.67};
+        } else {
+          mapCenter = {lat: 39.16, lng: -76.625};
+        }
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: mapCenter
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Kerner'
+        });
+      }
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA&callback=initMap")
+
