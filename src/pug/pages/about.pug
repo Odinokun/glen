@@ -13,17 +13,97 @@ block content
     include ../sections/page-header
 
     //begin content
-    main.main
+    main.main.about
+      //begin about__welcome
+      .about__welcome.about-welcome
+        .container
+          .about-welcome__pic
+            img(src="assets/img/doctor.jpg" alt="doctor")
+          .about-welcome__info
+            h3.about-welcome__title Welcome to Glen Burnie Dental Group
+            p At our Clinic we provide personalized service, using the latest tecniques and equipment. Our doctors are first-class dentists and the best medical/dentistry school graduates whose goal is to make you helthier and happier. With great care and devotion we aim to give you beautiful smiles! At Glen Burnie Dental Group, we have experienced dental professionals offering the highest quality of dental care to meet your oral health needs.
+            p.hidden-less-767 We understand that visiting the dentist can be stressful for some patients. This is why we provide a personalized service, keeping your ease and comfort in mind. Our facility and procedures have been designed to accommodate the needs of all our patients, allowing us to deliver exceptional dental services.The team of doctors at Glen Burnie Dental Group consists of exceptional dentists who focus on developing lasting relationships with patients, helping promote their dental health for life. They are the leading dental school graduates who are focused on offering the highest quality of dental care while making you feel comfortable and welcome.
+      //end about__welcome
 
-      //include ../sections/index-video
-      //include ../sections/index-text-01
-      //include ../sections/index-services
-      //include ../sections/index-text-02
-      //include ../sections/index-banner
-      //include ../sections/index-review
-      //include ../sections/index-all-team
-      //include ../sections/index-write-us
-      //include ../sections/index-map
+      //begin about__why-we
+      .about__why-we.about-why-we
+        .container
+          h3.subtitle.about-why-we__title Why Clients Choose Us?
+          ul.about-why-we__list
+            li.about-why-we__item Professional dental services delivered in a welcoming and warm atmosphere
+            li.about-why-we__item Fully equipped dental rooms, state-of-the-art facilities, and modern X-Ray imaging
+            li.about-why-we__item Competitive prices with affordable treatments
+            li.about-why-we__item Committed and dedicated team of professionals
+            li.about-why-we__item Easily accessible ground floor site that is fully accessible for differently abled persons
+            li.about-why-we__item Individually tailored treatment plans and payment options
+            li.about-why-we__item Free parking on the side of the building
+            li.about-why-we__item Accessible by public transportation
+            li.about-why-we__item Extensive range of dental treatments
+          span.about-why-we__ps * Training of medical personnel
+      //end about__why-we
+
+      //begin about__forms
+      .about__forms.about-forms
+        .container
+          h3.subtitle.about-forms__title Forms
+          ul.about-forms__list
+            //begin about-forms__item
+            li.about-forms__item
+              a(href="#").about-forms__link
+                .about-forms__icon
+                  +svg('document')
+                .about-forms__text New Dental Patient Form
+                .about-forms__download
+                  +svg('download')
+            //end about-forms__item
+
+            //begin about-forms__item
+            li.about-forms__item
+              a(href="#").about-forms__link
+                .about-forms__icon
+                  +svg('dollar')
+                .about-forms__text Financial Policy
+                .about-forms__download
+                  +svg('download')
+            //end about-forms__item
+
+            //begin about-forms__item
+            li.about-forms__item
+              a(href="#").about-forms__link
+                .about-forms__icon
+                  +svg('user')
+                .about-forms__text Patient Business Policy
+                .about-forms__download
+                  +svg('download')
+            //end about-forms__item
+
+            //begin about-forms__item
+            li.about-forms__item
+              a(href="#").about-forms__link
+                .about-forms__icon
+                  +svg('eye')
+                .about-forms__text Privacy Practices
+                .about-forms__download
+                  +svg('download')
+            //end about-forms__item
+      //end about__forms
+
+      //begin about__gallery
+      .about__gallery.about-gallery
+        .container
+          h3.subtitle.about-gallery__title Gallery
+          //begin about-gallery__list
+          ul.about-gallery__list#about-gallery__list
+            li.about-gallery__item
+              img(src="assets/img/gallery-01.jpg" alt="picture")
+            li.about-gallery__item
+              img(src="assets/img/gallery-02.jpg" alt="picture")
+            li.about-gallery__item
+              img(src="assets/img/gallery-01.jpg" alt="picture")
+            li.about-gallery__item
+              img(src="assets/img/gallery-02.jpg" alt="picture")
+          //end about-gallery__list
+      //end about__gallery
     //end content
 
     include ../sections/footer

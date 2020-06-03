@@ -128,6 +128,16 @@ svg {
   }
 }
 
+.subtitle {
+  font-size: 48px;
+  line-height: 64px;
+
+  @include max(767) {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+}
+
 .btn {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 24px;
