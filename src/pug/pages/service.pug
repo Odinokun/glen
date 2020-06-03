@@ -1,0 +1,72 @@
+extends ../_template
+
+block variables
+  - var title           = 'Teeth Cleaning | Glen Burnie Dental Group'
+  - var description     = 'Teeth Cleaning | Glen Burnie Dental Group'
+  - var ogtitle         = 'Teeth Cleaning | Glen Burnie Dental Group'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeader      = 'Teeth Cleaning'
+
+block content
+  .main-wrap
+    include ../sections/header
+    //begin page-header
+    .page-header
+      .page-header__img(style="background-image: url('assets/img/page-header-service.jpg');")
+      .container
+        a(href="service.html").page-header__back-link
+          +svg('arr-right')
+        h2.title.page-header__title #{pageHeader}
+    //end page-header
+
+    //begin content
+    main.main.service
+      .container
+        p Regular hygiene sessions are a must for good oral health. To keep your gums in optimum condition, it is advised to have a quick Scale and Polish every 6 months at least. We believe the best way to achieve a happy, healthy smile is by regular dental appointments and regular oral hygiene appointments with a Scale and Polish cleaning session.
+        p At Glen Burnie Dental Group, you are in capable hands of our experienced dentists and dental hygienists, who conduct a thorough cleaning for you and now there are many different options to chose between!
+        ul.service__list.service-list
+          li.service-list__item Basic Scale and Polish teeth cleaning
+          li.service-list__item Airflow Sparkle Polish – the latest in teeth cleaning technology with airflow jet used to unmask those pearly whites and leave a  lasting clean result
+          li.service-list__item Quick Clean – a rapid result for all those busy bees!
+        p Following your dental examination, your dentist may suggest that you have a routine hygiene session to maintain your oral health. Hygiene sessions with your Dental Hygienist protect your oral health by cleaning your teeth thoroughly and removing any plaque, stains and spots. They uncover the enamel surface from any layers of building plaque and delve into the gum line to leave teeth looking and feeling great!
+
+        //begin service__item
+        .service__item
+          .service__img
+            img(src="assets/img/service-img-01.jpg" alt="picture")
+          .service__text.service-text
+            h3.subtitle.service-text__title Teeth cleaning
+            p Teeth cleaning is part of oral hygiene and involves the removal of dental plaque from teeth with the intention of preventing cavities (dental caries), gingivitis, and periodontal disease. People routinely clean their own teeth by brushing and interdental cleaning, and dental hygienists can remove hardened deposits (tartar) not removed by routine cleaning.
+            p We recognize and treat problems such as cavities in plenty of time. You’ll always have a happy smile. Our preventative measures help ensure the long-term health of gums, teeth, mouth lining and implants. We have developed tailor-made prevention concepts for children and adults.
+        //end service__item
+
+        //begin service__item
+        .service__item
+          .service__img
+            img(src="assets/img/service-img-02.jpg" alt="picture")
+          .service__text.service-text
+            h3.subtitle.service-text__title Airflow Polishing
+            p Airflow tooth polishing is a new innovative method of dental cleaning that successfully tackles the persistent staining of lingering trespasses of our daily food and drink, leaving the mouth feeling cleaner and fresher than ever before.
+            p Airflow combines the strength of 3 vital things– air, sodium bicarbonate and a jet of water. It produces excellent results without risking any damage to your teeth and also combats discoloring all in one go!
+            p.hidden-less-767 The powerful jet is a step up from the standard Scale and Polish session since it combines the power of a thorough clean with a cosmetic feel! The Airflow is more successfully able to blast those persistent stains allowing the natural, whiter and brighter enamel to resurface, producing the dental refresh you are looking for!
+            p.hidden-less-767 The Airflow system has been carefully designed and developed to be an effective, but safe hygiene treatment:
+            ul.service-text__list.hidden-less-767
+              li.service-text__item The mixture is non toxic and therefore will not cause any harm if accidentally ingested
+              li.service-text__item There will be no pain caused, as this is a 100% non-invasive treatment
+        //end service__item
+
+        //begin service__item
+        .service__item
+          .service__img
+            img(src="assets/img/service-img-03.jpg" alt="picture")
+          .service__text.service-text
+            h3.subtitle.service-text__title Periodontal treatment
+            p In our dental office, our dental professionals are looking after the condition of your teeth.
+            p We treat any inflammation in your gums to maintain the condition of the supportive tissue around your teeth. Healthy gums are very important for ensuring healthy teeth.
+            p Inflammation of the gums or the tissue that holds the teeth in place – so-called periodontitis – can damage your ability to bite and even lead to tooth loss. To make sure this doesn’t happen, we start treatment promptly to stop the process and maintain your long-term dental health.
+            p.hidden-less-767 Deep periodontal cleaning is the first step to winning back those healthy teeth!
+        //end service__item
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
